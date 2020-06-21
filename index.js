@@ -37,6 +37,6 @@ $(document).ready(function() {
             width: "100%",
             height: "100%"
         }, 1100, function() {
-            window.location.replace("Goxtend/Antik Karte.pdf");
+            window.location.replace("Antik Karte.pdf");
         });
 });
