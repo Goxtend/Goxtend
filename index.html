@@ -2,6 +2,10 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="index.js"></script>
 <style>
     body { 
         height: 100vh; 
@@ -30,74 +34,26 @@
         top: 0%;
         left: 0%;
         opacity: 1;
-        animation-name: fadeout;
-        animation-duration: 2s;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in;
         background-color: #ffffff;
     }
 
     .img {
         position: absolute;
-        top: 25%;
+        top: 15%;
         left: 25%;
         height: 50%;
         width: 50%;
-        animation-name: fadeout_and_scale;
-        animation-duration: 2s;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in;
     }
-
-    @keyframes fadeout {
-        0% { 
-            opacity: 1;
-        }
-        99%   {
-            opacity: 0;
-        }
-        100% {
-            opacity: 0;
-            overflow: hidden;
-            display: none;
-            visibility: hidden;
-        }
-    }
-
-    @keyframes fadeout_and_scale {
-        0% { 
-            opacity: 1;
-            transform: scale(100%, 100%);
-        }
-        99%   {
-            opacity: 0;
-            transform: scale(150%, 150%);
-        }
-        100% {
-            opacity: 0;
-            overflow: hidden;
-            display: none;
-            visibility: hidden;
-        }
-    }
-
 
     .meter { 
         height: 20px;
-        top: 80%;
+        top: 70%;
         width: 60%;
         left: 20%;
         right: 20%;
         position: absolute;
         background: #f3efe6;
         overflow: hidden;
-        animation-name: fadeout;
-        animation-duration: 3s;
-        animation-delay: 3s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in;
     }
 
     .meter span {
@@ -107,7 +63,7 @@
 
     .progress {
         background-color: #ec6608;
-        animation: progressBar 2s ease-in-out;
+        animation: progressBar 2.5s ease-in-out;
         animation-fill-mode:both; 
     }
 
