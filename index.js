@@ -1,3 +1,7 @@
+let cards = {
+    antik: "Antik Karte.pdf"
+}
+
 $(document).ready(function() {
     $(".overlay")
         .animate({ opacity: 1 }, 2000)
@@ -37,6 +41,15 @@ $(document).ready(function() {
             width: "100%",
             height: "100%"
         }, 1100, function() {
-            window.location.replace("Antik Karte.pdf");
+            loadPdf();
         });
 });
+
+function loadPdf() {
+    let searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('card')) {
+        let card = searchParams.get('card');
+        window.location.href = cards[card];
+        window.location.replace(cards[card]);
+    }
+}
