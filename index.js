@@ -5,14 +5,17 @@ let cards = {
 $(document).ready(function() {
     $(".overlay")
         .animate({ opacity: 1 }, 2000)
-        .animate({ opacity: 0 }, 2000);
+        .animate({ 
+            //opacity: 0
+        }, 2000);
     
     $(".progress, .meter")
         .animate({
             opacity: 1}, 1900)
         .animate({
-            backgroundColor: "#ffffff",
-            opacity: 0}, 2000);
+                backgroundColor: "#ffffff",
+                //opacity: 0
+            }, 2000);
 
     small_size = "50%";
     big_size = "52%"
@@ -38,11 +41,11 @@ $(document).ready(function() {
             height: small_size
         }, 800)
         .animate({
-            opacity: 0,
-            left: "0%",
-            top: "0%",
-            width: "100%",
-            height: "100%"
+            //opacity: 0,
+            left: "24%",
+            top: "14%",
+            width: big_size,
+            height: big_size
         }, 1100, function() {
             loadPdf();
         });
