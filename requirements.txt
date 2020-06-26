@@ -1,0 +1,4 @@
+numpy==1.19.0
+Pillow==7.1.2
+pypng==0.0.20
+PyQRCode==1.2.1
