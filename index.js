@@ -3,43 +3,59 @@ let cards = {
 }
 
 $(document).ready(function() {
-    $(".overlay")
-        .animate({ opacity: 1 }, 2000)
-        .animate({ opacity: 0 }, 2000);
-    
     $(".progress, .meter")
         .animate({
-            opacity: 1}, 1900)
+            opacity: 1
+        }, 1900)
         .animate({
-            backgroundColor: "#ffffff",
-            opacity: 0}, 2000);
+                backgroundColor: "#ffffff",
+            }, 2000);
+
+    small_height = 60;
+    small_width = 60;
+    big_height = 62;
+    big_width = 62;
+
+    top_offset = -10;
+
+    small_size_height = small_height + "%";
+    small_size_width = small_width + "%";
+    big_size_height = big_height + "%";
+    big_size_width = big_width + "%";
+
+    left_small = (100 - small_width) / 2 + "%";
+    top_small = top_offset + (100 - small_height) / 2 + "%";
+    left_big = (100 - big_width) / 2 + "%";
+    top_big = top_offset + (100 - big_height) / 2 + "%";
 
     $(".img")
         .animate({
-            opacity: 1,
-            width: "50%",
-            height: "50%"
+            left: left_small,
+            top: top_small,
+            width: small_size_width,
+            height: small_size_height
+        }, 0)
+        .animate({
+            width: small_size_width,
+            height: small_size_height
         }, 200)
         .animate({
-            opacity: 1,
-            left: "24%",
-            top: "14%",
-            width: "52%",
-            height: "52%"
+            left: left_big,
+            top: top_big,
+            width: big_size_width,
+            height: big_size_height
         }, 800, "swing")
         .animate({
-            opacity: 1,
-            left: "25%",
-            top: "15%",
-            width: "50%",
-            height: "50%"
+            left: left_small,
+            top: top_small,
+            width: small_size_width,
+            height: small_size_height
         }, 800)
         .animate({
-            opacity: 0,
-            left: "0%",
-            top: "0%",
-            width: "100%",
-            height: "100%"
+            left: left_big,
+            top: top_big,
+            width: big_size_width,
+            height: big_size_height
         }, 1100, function() {
             loadPdf();
         });
