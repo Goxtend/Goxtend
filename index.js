@@ -3,14 +3,10 @@ let cards = {
 }
 
 $(document).ready(function() {
-    $(".overlay")
-        .animate({ opacity: 1 }, 2000)
-        .animate({
-        }, 2000);
-    
     $(".progress, .meter")
         .animate({
-            opacity: 1}, 1900)
+            opacity: 1
+        }, 1900)
         .animate({
                 backgroundColor: "#ffffff",
             }, 2000);
@@ -40,19 +36,16 @@ $(document).ready(function() {
             height: small_size_height
         }, 0)
         .animate({
-            opacity: 1,
             width: small_size_width,
             height: small_size_height
         }, 200)
         .animate({
-            opacity: 1,
             left: left_big,
             top: top_big,
             width: big_size_width,
             height: big_size_height
         }, 800, "swing")
         .animate({
-            opacity: 1,
             left: left_small,
             top: top_small,
             width: small_size_width,
