@@ -14,25 +14,28 @@ $(document).ready(function() {
             backgroundColor: "#ffffff",
             opacity: 0}, 2000);
 
+    small_size = "50%";
+    big_size = "52%"
+
     $(".img")
         .animate({
             opacity: 1,
-            width: "50%",
-            height: "50%"
+            width: small_size,
+            height: small_size
         }, 200)
         .animate({
             opacity: 1,
             left: "24%",
             top: "14%",
-            width: "52%",
-            height: "52%"
+            width: big_size,
+            height: big_size
         }, 800, "swing")
         .animate({
             opacity: 1,
             left: "25%",
             top: "15%",
-            width: "50%",
-            height: "50%"
+            width: small_size,
+            height: small_size
         }, 800)
         .animate({
             opacity: 0,
