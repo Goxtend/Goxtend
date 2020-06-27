@@ -6,10 +6,10 @@ $(document).ready(function() {
     $(".progress, .meter")
         .animate({
             opacity: 1
-        }, 1900)
-        .animate({
-                backgroundColor: "#ffffff",
-            }, 2000);
+        }, 800)
+    .animate({
+        backgroundColor: "#ffffff",
+    }, 1000);
 
     small_height = 60;
     small_width = 60;
@@ -44,13 +44,13 @@ $(document).ready(function() {
             top: top_big,
             width: big_size_width,
             height: big_size_height
-        }, 800, "swing")
+        }, 100, "swing")
         .animate({
             left: left_small,
             top: top_small,
             width: small_size_width,
             height: small_size_height
-        }, 800)
+        }, 100)
         .animate({
             left: left_big,
             top: top_big,
