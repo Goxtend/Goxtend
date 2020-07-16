@@ -1,6 +1,7 @@
 let cards = {
     antik: "Antik Karte.pdf",
-    xaza: "Xaza_Karte.pdf"
+    xaza: "Xaza_Karte.pdf",
+    lapot: "Lapot_Karte.pdf",
 }
 
 $(document).ready(function() {
