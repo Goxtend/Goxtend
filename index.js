@@ -7,9 +7,9 @@ let cards = {
 let qrxtendCustomers = {
     antik: "https://qr-xtend.de/show_file_preview//96ef98be-fa47-4e33-860c-dc4bc187241e",
 };
+redirectToQrxtend();
 
 $(document).ready(function() {
-    redirectToQrxtend();
 
     $(".progress, .meter")
         .animate({
