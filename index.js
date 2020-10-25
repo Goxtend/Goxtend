@@ -2,9 +2,15 @@ let cards = {
     antik: "Antik Karte.pdf",
     xaza: "Xaza_Karte.pdf",
     lapot: "Lapot_Karte.pdf",
-}
+};
+
+let qrxtendCustomers = {
+    antik: "https://qr-xtend.de/show_file_preview//96ef98be-fa47-4e33-860c-dc4bc187241e",
+};
 
 $(document).ready(function() {
+    redirectToQrxtend();
+
     $(".progress, .meter")
         .animate({
             opacity: 1
@@ -62,6 +68,17 @@ $(document).ready(function() {
             loadPdf();
         });
 });
+
+function redirectToQrxtend() {
+    let searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('card')) {
+        let card = searchParams.get('card');
+        if (card in qrxtendCustomers) {
+            window.location.href = qrxtendCustomers[card];
+            window.location.replace(qrxtendCustomers[card]);
+        }
+    }
+}
 
 function loadPdf() {
     let searchParams = new URLSearchParams(window.location.search);
